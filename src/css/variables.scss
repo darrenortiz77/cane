@@ -1,0 +1,25 @@
+$bp-tablet: 768px;
+$bp-desktop: 1200px;
+
+:root {
+	/* Colors */
+	--brand-color-primary: #3fb76f;
+	--brand-color-secondary: #dbf617;
+	--color-dark-green: #30493c;
+	--color-light-green: #f0f5f2;
+	--color-success: var(--brand-color-primary);
+	--color-error: var(--brand-color-secondary);
+
+	/* Fonts */
+	--font-plex-mono: 'IBM Plex Mono', monospace;
+	--font-inter: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+	/* Breakpoints */
+	--bp-mobile-max: #{$bp-tablet - 1};
+	--bp-tablet: #{$bp-tablet};
+	--bp-tablet-max: #{$bp-desktop - 1};
+	--bp-desktop: #{$bp-desktop};
+
+	/* Misc */
+	--nav-height-desktop: 108px;
+}

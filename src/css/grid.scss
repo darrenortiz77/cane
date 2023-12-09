@@ -1,0 +1,36 @@
+.container {
+	max-width: 1232px;
+	padding: 0 40px;
+	margin: 0 auto;
+	box-sizing: content-box;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-gap: 24px;
+}
+
+@for $i from 1 through 12 {
+	.col-#{$i} {
+		grid-column: span $i;
+	}
+
+	.col-#{$i}-m {
+		@media (max-width: #{$bp-tablet - 1}) {
+			grid-column: span $i;
+		}
+	}
+
+	.col-#{$i}-t {
+		@media (min-width: $bp-tablet) and (max-width: #{$bp-desktop - 1}) {
+			grid-column: span $i;
+		}
+	}
+
+	.col-#{$i}-d {
+		@media (min-width: $bp-desktop) {
+			grid-column: span $i;
+		}
+	}
+}
