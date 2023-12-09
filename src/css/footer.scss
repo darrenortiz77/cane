@@ -1,6 +1,10 @@
 footer {
 	background-color: var(--color-dark-green);
-	padding: 5rem 0 2rem;
+	padding: 3rem 0 1rem;
+
+	@media (min-width: $bp-desktop) {
+		padding: 5rem 0 2rem;
+	}
 
 	&,
 	a {
@@ -9,15 +13,22 @@ footer {
 }
 
 .footer-links-ctn {
-	justify-self: end;
+	justify-self: start;
+
+	@media (min-width: $bp-tablet) {
+		justify-self: end;
+	}
 }
 
 .footer-links {
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
-	text-align: right;
 	font-family: var(--font-plex-mono);
+
+	@media (min-width: $bp-tablet) {
+		text-align: right;
+	}
 
 	a {
 		display: inline-block;

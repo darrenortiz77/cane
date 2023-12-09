@@ -25,7 +25,7 @@ class EmailSignupForm {
 	 */
 	private onInputChange() {
 		// TODO: throttling this would be nice, but probably too much of a pre-optimization
-		if (this.state === States.InError && this.isValid()) {
+		if (this.state === States.InError && (this.isValid() || this.input.value.trim() === '')) {
 			this.updateState(States.Default);
 		}
 	}

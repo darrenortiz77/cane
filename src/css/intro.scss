@@ -1,8 +1,16 @@
 .intro {
-	margin-top: 120px;
+	margin-top: 2.875rem;
 
-	/* fudge its position to line-up with "How we make it" */
-	h3 {
-		margin-top: -0.166em;
+	.grid {
+		grid-row-gap: 0;
+	}
+
+	@media (min-width: $bp-desktop) {
+		margin-top: 7.5rem;
+
+		/* fudge its position to line-up with "How we make it" */
+		h3 {
+			margin-top: -0.166em;
+		}
 	}
 }

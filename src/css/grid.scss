@@ -1,14 +1,22 @@
 .container {
 	max-width: 1232px;
-	padding: 0 40px;
+	padding: 0 2rem;
 	margin: 0 auto;
 	box-sizing: content-box;
+
+	@media (min-width: $bp-desktop) {
+		padding: 0 2.5rem;
+	}
 }
 
 .grid {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
-	grid-gap: 24px;
+	grid-gap: 1rem;
+
+	@media (min-width: $bp-desktop) {
+		grid-gap: 1.5rem;
+	}
 }
 
 @for $i from 1 through 12 {
