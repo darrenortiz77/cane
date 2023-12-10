@@ -49,8 +49,8 @@ class Nav {
 	 */
 	private watchNavScrollPosition() {
 		const observerTarget = document.createElement('div');
-		observerTarget.classList.add('nav-scroll-observer');
 		document.body.prepend(observerTarget);
+		observerTarget.classList.add('nav-scroll-observer');
 
 		const obs = new IntersectionObserver((entries) => {
 			const shouldStick = !entries[0].isIntersecting;

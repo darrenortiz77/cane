@@ -1,7 +1,42 @@
 .hero {
 	color: white;
 	background-color: var(--color-dark-green);
-	padding-top: var(--nav-height-desktop);
+	padding-top: calc(var(--nav-height-mobile) + 30px);
+
+	@media (min-width: $bp-desktop) {
+		padding-top: var(--nav-height-desktop);
+	}
+
+	h1 {
+		visibility: hidden;
+
+		em {
+			font-style: normal;
+		}
+
+		&.anim {
+			visibility: visible;
+
+			span {
+				opacity: 1;
+				left: 0;
+			}
+
+			em {
+				animation-name: h1-highlight;
+				animation-duration: 1s;
+				animation-timing-function: ease-in;
+				animation-fill-mode: forwards;
+			}
+		}
+
+		span {
+			position: relative;
+			opacity: 0;
+			left: 30px;
+			transition: opacity 0.8s ease-in, left 1.3s cubic-bezier(0.25, 0.67, 0.38, 0.92);
+		}
+	}
 }
 
 .hero-img-ctn {
@@ -86,4 +121,10 @@ Sizes and positions are relative to size of image.
 	width: 35%;
 	left: -22%;
 	top: 60%;
+}
+
+@keyframes h1-highlight {
+	to {
+		color: var(--brand-color-secondary);
+	}
 }

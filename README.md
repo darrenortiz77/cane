@@ -11,7 +11,9 @@
 
 TODO:
 
-- animate main title
+- make it so when you click outside the nav it closes
+- add a skip to nav, skip to main button
+- figure out what that initial anim is with the nav??
 - animate checkmarks and selling points
 - animate hero image
 - animate bra cups

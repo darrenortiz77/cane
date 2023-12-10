@@ -34,11 +34,6 @@ h1 {
 	letter-spacing: -0.04em;
 	margin: 2.375rem 0 0;
 
-	em {
-		color: var(--brand-color-secondary);
-		font-style: normal;
-	}
-
 	@media (min-width: $bp-tablet) {
 		font-size: 3rem;
 	}
