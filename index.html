@@ -53,12 +53,12 @@
 			</div>
 			<div class="hero-img-ctn">
 				<div class="container">
-					<img
-						src="assets/sugarcane@1x.png"
-						alt="Sugarcane"
-						class="hero-img"
-						srcset="assets/sugarcane@1x.png 1x, assets/sugarcane@2x.png 2x"
-					/>
+					<picture>
+						<source srcset="/assets/images/sugarcane/sugarcane-desktop@1x.webp 1x, /assets/images/sugarcane/sugarcane-desktop@2x.webp 2x" media="(min-width: 1200px)" />
+						<source srcset="/assets/images/sugarcane/sugarcane-tablet@1x.webp 1x, /assets/images/sugarcane/sugarcane-tablet@2x.webp 2x" media="(min-width: 768px)" />
+						<source srcset="/assets/images/sugarcane/sugarcane-mobile@1x.webp 1x, /assets/images/sugarcane/sugarcane-mobile@2x.webp 2x" />
+						<img src="/assets/images/sugarcane/sugarcane-desktop@1x.webp" alt="Field of sugarcane" class="hero-img" />
+					</picture>
 					<div class="bra-cup orange-cup"></div>
 					<div class="bra-cup green-cup"></div>
 				</div>

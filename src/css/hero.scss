@@ -28,6 +28,7 @@
 
 .hero-img {
 	border-radius: 32px;
+	display: block;
 }
 
 .selling-points {
@@ -49,7 +50,7 @@
 
 		&:before {
 			content: '';
-			background-image: url(/assets/check-circle.svg);
+			background-image: url(/assets/svgs/check-circle.svg);
 			background-repeat: no-repeat;
 			background-size: contain;
 			width: 16px;
@@ -74,14 +75,14 @@ Sizes and positions are relative to size of image.
 }
 
 .green-cup {
-	background-image: url(/assets/cup-green.svg);
+	background-image: url(/assets/svgs/cup-green.svg);
 	width: 58%;
 	left: 68%;
 	top: 6%;
 }
 
 .orange-cup {
-	background-image: url(/assets/cup-orange.svg);
+	background-image: url(/assets/svgs/cup-orange.svg);
 	width: 35%;
 	left: -22%;
 	top: 60%;
