@@ -74,9 +74,8 @@ header {
 	text-transform: uppercase;
 	background-color: transparent;
 	border-radius: 8px;
-	transition: background-color, border-radius, padding;
-	transition-duration: var(--transition-dur);
-	transition-timing-function: var(--transition-timing);
+	transition: background-color 200ms linear, border-radius var(--transition-dur) var(--transition-timing),
+		padding var(--transition-dur) var(--transition-timing), max-height 200ms ease-out;
 }
 
 .hamburger {
@@ -202,11 +201,6 @@ change the layout I prefer to keep them grouped together.
 			max-height: 250px;
 		}
 
-		.main-nav,
-		.primary-btn-ctn {
-			display: block;
-		}
-
 		.hamburger {
 			.top-line,
 			.mid-line {
@@ -234,7 +228,6 @@ change the layout I prefer to keep them grouped together.
 		overflow: hidden;
 		padding-top: 0;
 		padding-bottom: 0.75rem;
-		transition: max-height 200ms ease-out;
 	}
 
 	.logo-ctn {
@@ -249,7 +242,6 @@ change the layout I prefer to keep them grouped together.
 	.primary-btn-ctn {
 		grid-column: 1 / span 12;
 		justify-self: center;
-		display: none;
 	}
 
 	.main-nav ul {

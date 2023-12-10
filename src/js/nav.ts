@@ -14,13 +14,15 @@ class Nav {
 	};
 	private hamburger: HTMLButtonElement;
 	private onKeyDownBound: (e: KeyboardEvent) => void;
+	private onClickOutsideBound: (e: MouseEvent) => void;
 	private interactiveElms: Array<HTMLAnchorElement | HTMLButtonElement>;
 	private mediaQuery: MediaQueryList;
 
 	constructor(private elm: HTMLElement) {
 		this.hamburger = elm.querySelector<HTMLButtonElement>('.js-hamburger')!;
-		this.onKeyDownBound = this.onKeyDown.bind(this);
 		this.interactiveElms = Array.from(elm.querySelectorAll('button, a'));
+		this.onKeyDownBound = this.onKeyDown.bind(this);
+		this.onClickOutsideBound = this.onClickOutside.bind(this);
 
 		// Watch for click events of the hamburger button
 		this.hamburger.addEventListener('click', this.toggleNav.bind(this));
@@ -98,6 +100,16 @@ class Nav {
 	}
 
 	/**
+	 * Check for clicks outside the nav. Close if so.
+	 * @param e
+	 */
+	private onClickOutside(e: MouseEvent) {
+		if (e.target !== this.elm && !this.elm.contains(e.target as HTMLElement)) {
+			this.updateState({isMobileOpen: false});
+		}
+	}
+
+	/**
 	 * Change some aspect of the state object and re-render accordingly.
 	 * @param newState
 	 */
@@ -156,6 +168,7 @@ class Nav {
 		this.elm.classList.add('mobile-open');
 		this.elm.setAttribute('aria-expanded', 'true');
 		window.addEventListener('keydown', this.onKeyDownBound);
+		window.addEventListener('click', this.onClickOutsideBound);
 	}
 
 	/**
@@ -165,6 +178,7 @@ class Nav {
 		this.elm.classList.remove('mobile-open');
 		this.elm.setAttribute('aria-expanded', 'false');
 		window.removeEventListener('keydown', this.onKeyDownBound);
+		window.removeEventListener('click', this.onClickOutsideBound);
 	}
 }
 
