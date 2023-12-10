@@ -1,11 +1,11 @@
 .container {
 	max-width: 1232px;
-	padding: 0 2rem;
+	padding: 0 var(--site-padding-mobile);
 	margin: 0 auto;
 	box-sizing: content-box;
 
 	@media (min-width: $bp-desktop) {
-		padding: 0 2.5rem;
+		padding: 0 var(--site-padding-desktop);
 	}
 }
 

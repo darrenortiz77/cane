@@ -7,11 +7,10 @@
 - nice to have: don't show email signup form on every page request during same session
 - didn't see a need for anything other than vanilla, other than maybe the email signup form
 - kept the code really simple, don't like importing libraries needlessly
+- mobile nav is a11y-friendly: traps keyboard focus, has appropriate aria labels, esc key closes it
 
 TODO:
 
-- compress image and create separate breakpoint renditions
-- mobile nav
 - animate main title
 - animate checkmarks and selling points
 - animate hero image

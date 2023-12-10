@@ -12,15 +12,20 @@
 		<meta charset="UTF-8" />
 	</head>
 	<body>
-		<header class="js-nav">
+		<header class="js-nav" aria-label="Main navigation" aria-haspopup="true" aria-expanded="false">
 			<div class="container">
 				<div class="main-nav-ctn grid">
-					<div class="col-2">
+					<button class="hamburger js-hamburger" aria-label="Toggle menu">
+						<div class="top-line"></div>
+						<div class="mid-line"></div>
+						<div class="bot-line"></div>
+					</button>
+					<div class="logo-ctn col-2-d">
 						<a href="/" class="logo" aria-label="cane.">
 							<img src="/assets/svgs/cane-logo.svg" alt="" />
 						</a>
 					</div>
-					<nav class="main-nav col-8">
+					<nav class="main-nav col-8-d">
 						<ul>
 							<li><a href="/values">Our Values</a></li>
 							<li><a href="/difference">Our Difference</a></li>
@@ -28,7 +33,7 @@
 							<li><a href="/testimonials">Testimonials</a></li>
 						</ul>
 					</nav>
-					<div class="primary-btn-ctn col-2">
+					<div class="primary-btn-ctn col-2-d">
 						<a href="mailto:darren@darrenortiz.ca" class="primary-btn">Get in touch</a>
 					</div>
 				</div>
