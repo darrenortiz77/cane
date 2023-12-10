@@ -13,7 +13,6 @@ TODO:
 
 - add a skip to nav, skip to main button
 - figure out what that initial anim is with the nav??
-- animate checkmarks and selling points
 - animate hero image
 - animate bra cups
 - cleanup readme
