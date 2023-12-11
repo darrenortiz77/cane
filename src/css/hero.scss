@@ -59,11 +59,39 @@
 	.container {
 		position: relative;
 	}
+
+	picture {
+		display: block;
+		background-color: white;
+	}
+
+	&.anim {
+		.hero-img {
+			visibility: visible;
+			opacity: 1;
+			transform: scale(
+				1.01
+			); //.01 only because I accidentally exported the image with an extra px of white on the right and I'm too lazy to re-export all the various renditions. :(
+			transition: opacity 2s linear, transform 8s ease-in-out;
+		}
+
+		.bra-cup {
+			animation-name: bra-cup-anim;
+		}
+	}
+}
+
+.hero-img-ctn-inner {
+	border-radius: 32px;
+	overflow: hidden;
 }
 
 .hero-img {
-	border-radius: 32px;
 	display: block;
+	visibility: hidden;
+	transform-origin: bottom;
+	transform: scale(1.2);
+	opacity: 0;
 }
 
 .selling-points {
@@ -179,7 +207,12 @@ Sizes and positions are relative to size of image.
 	background-repeat: no-repeat;
 	background-size: contain;
 	pointer-events: none;
-	aspect-ratio: 712/328;
+	// aspect-ratio: 712/328;
+	aspect-ratio: 1;
+	clip-path: polygon(50% 0%, -50% 0%, -50% -200%, 150% -200%, 150% 0%);
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	animation-timing-function: cubic-bezier(0.25, 0.48, 0.81, 0.56);
 }
 
 .green-cup {
@@ -187,6 +220,7 @@ Sizes and positions are relative to size of image.
 	width: 58%;
 	left: 68%;
 	top: 6%;
+	animation-delay: 2s;
 }
 
 .orange-cup {
@@ -194,10 +228,26 @@ Sizes and positions are relative to size of image.
 	width: 35%;
 	left: -22%;
 	top: 60%;
+	transform: scaleX(-100%);
+	animation-delay: 2.4s;
 }
 
 @keyframes h1-highlight {
 	to {
 		color: var(--brand-color-secondary);
+	}
+}
+
+@keyframes bra-cup-anim {
+	0% {
+		clip-path: polygon(50% 0%, -50% 0%, -50% -200%, 150% -200%, 150% 0%);
+	}
+
+	40% {
+		clip-path: polygon(50% 0%, 50% 100%, -50% 100%, -50% -50%, 50% -50%);
+	}
+
+	100% {
+		clip-path: polygon(50% 0%, 150% 0%, 150% 200%, -50% 100%, -50% 0%);
 	}
 }

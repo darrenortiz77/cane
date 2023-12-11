@@ -8,11 +8,10 @@
 - didn't see a need for anything other than vanilla, other than maybe the email signup form
 - kept the code really simple, don't like importing libraries needlessly
 - mobile nav is a11y-friendly: traps keyboard focus, has appropriate aria labels, esc key closes it
+- anims are overkill, but just demonstrating that I can
 
 TODO:
 
 - add a skip to nav, skip to main button
 - figure out what that initial anim is with the nav??
-- animate hero image
-- animate bra cups
 - cleanup readme
