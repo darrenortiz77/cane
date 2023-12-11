@@ -55,9 +55,11 @@ class Nav {
 		observerTarget.classList.add('nav-scroll-observer');
 
 		const obs = new IntersectionObserver((entries) => {
+			console.log(entries[0]);
 			const shouldStick = !entries[0].isIntersecting;
 			this.updateState({isStuck: shouldStick});
 		});
+
 		obs.observe(observerTarget);
 	}
 

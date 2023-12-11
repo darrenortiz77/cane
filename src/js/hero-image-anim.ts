@@ -16,7 +16,7 @@ class HeroImageAnim {
 					this.playAnim();
 				}
 			},
-			{threshold: 0.75}
+			{threshold: 0.5}
 		);
 		obs.observe(elm);
 
