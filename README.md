@@ -28,7 +28,7 @@ Runs the app in the development mode. Will provide you with a `localhost` url in
 ## Features and notes
 
 - I added a footer. Felt like it could use one.
-- The stickiness of nav does not use a scroll listener, but rather a more-performant `IntersectionObserver`
+- The stickiness of the nav does not use a scroll listener, but rather a more-performant `IntersectionObserver`
 - I wasn't sure if those cards at the bottom should've been links or not.
 - I have a grid-overlay in there to make sure everything's lining up correcly. You can view it by either:
   - a) inspect the DOM for an element with a CSS class of `grid-guide`. Disable the `display: none;`. or...
